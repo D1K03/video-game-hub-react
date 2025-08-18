@@ -9,9 +9,9 @@ export default function Navbar() {
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input id="game-search" type="textbox" placeholder="Search"></input>
                     <i class="fa-solid fa-xmark"></i>
-                    {/* <div>
-                        <p><span>alt</span> + <span>enter</span></p>
-                    </div> */}
+                    <div class="shortcut-one">
+                        <p><span className='symbol'>alt</span> + <span className='symbol'>enter</span></p>
+                    </div>
                 </label>
             </form>
         </header>

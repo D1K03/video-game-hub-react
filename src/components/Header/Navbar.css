@@ -12,7 +12,10 @@ header h1 {
 }
 
 header form {
+    display: flex;
+    align-items: center;
     flex-grow: 1;
+    color: #a7a7a7;
 }
 
 .search-label {
@@ -24,16 +27,58 @@ header form {
 
 #game-search {
     flex-grow: 1;
-    height: 2.5rem;
-    padding: 0 3rem;
+    height: 2.75rem;
+    padding: 0 2.75rem;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 9999px;
+    transition: background-color 200ms ease-in-out 50ms, color 200ms ease-in-out 50ms;
+}
+
+#game-search:hover {
+    background-color: white;
+    color: black;
+}
+
+#game-search:focus {
+    outline: none;
 }
 
 .fa-magnifying-glass {
     position: absolute;
     left: 1rem;
+    color: #898989;
+    transition: color 200ms ease-in-out 50ms;
+}
+
+.search-label:hover .fa-magnifying-glass {
+    color: black;
 }
 
 .fa-xmark {
+    display: none;
     position: absolute;
     right: 1rem;
+}
+
+.shortcut-one {
+    position: absolute;
+    right: 1rem;
+    font-size: small;
+    transition: opacity 200ms ease-in 50ms, visibility 150ms ease-in 0ms;
+}
+
+.search-label:hover .shortcut-one {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shortcut-one .symbol {
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    padding: 0.25rem;
+}
+
+.shortcut-one p {
+    user-select: none;
 }
