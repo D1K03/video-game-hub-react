@@ -1,0 +1,39 @@
+header {
+    grid-area: h;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+header h1 {
+    white-space: nowrap;
+    font-size: x-large;
+}
+
+header form {
+    flex-grow: 1;
+}
+
+.search-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#game-search {
+    flex-grow: 1;
+    height: 2.5rem;
+    padding: 0 3rem;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    left: 1rem;
+}
+
+.fa-xmark {
+    position: absolute;
+    right: 1rem;
+}
