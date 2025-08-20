@@ -1,3 +1,11 @@
-aisde {
+aside {
+    display: flex;
+    flex-direction: column;
     grid-area: a;
+    gap: 1rem;
+}
+
+aside h2 {
+    margin: 0;
+    padding: 0;
 }
