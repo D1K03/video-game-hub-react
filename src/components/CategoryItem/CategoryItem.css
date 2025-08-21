@@ -1,0 +1,15 @@
+li {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.icon-background {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--charcoal-grey);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
