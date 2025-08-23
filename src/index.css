@@ -16,3 +16,20 @@
     --light-grey: #767676;
     --charcoal-grey: #2D2D2D;
 }
+
+html {
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1.75rem 3rem;
+  margin: 0 auto;
+}

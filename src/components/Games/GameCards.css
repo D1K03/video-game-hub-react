@@ -1,3 +1,55 @@
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     grid-area: m;
+}
+
+main h2 {
+    font-size: 4rem;
+}
+
+.page-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.game-filters > div {
+    background-color: #252525;
+    font-size: smaller;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.game-filters p {
+    display: flex;
+    align-items: center;
+}
+
+.game-filters div:nth-of-type(1) p {
+    gap: 1rem;
+}
+
+.game-filters div:nth-of-type(2) p {
+    gap: 2rem;
+}
+
+.order-filter-spacing {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.bold-filter {
+    font-weight: bolder;
+}
+
+.dropdown-chevron {
+    font-size: 1rem;
+    color: #777777;
 }

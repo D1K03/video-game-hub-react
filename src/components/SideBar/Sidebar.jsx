@@ -45,44 +45,44 @@ export default function Sidebar() {
         <aside>
             <h2>Home</h2>
             <h2>Reviews</h2>
-            <div>
+            <section>
                 <h2>New Releases</h2>
                 <ul className='category-one'>
                     {OPTIONS.new.map((data, index) => {
                         return <CategoryItem key={index} icon={data.icon} description={data.desc}/>                    
                     })}
                 </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h2>Top</h2>
                 <ul className='category-two'>
                     {OPTIONS.top.map((data, index) => {
                         return <CategoryItem key={index} icon={data.icon} description={data.desc}/>                    
                     })}
                 </ul>
-            </div>
+            </section>
             <h2>All Games</h2>
-            <div>
+            <section>
                 <h2>Browse</h2>
                 <ul className='category-three'>
                     {OPTIONS.browse.map((data, index) => {
                         return <CategoryItem key={index} icon={data.icon} description={data.desc}/>                    
                     })}
                 </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h2>Platforms</h2>
                 <ul className='category-four'>
                     {OPTIONS.platforms.map((data, index) => {
                         return <CategoryItem key={index} icon={data.icon} description={data.desc}/>                    
                     })}
                 </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h2>Genres</h2>
                 <ul className='category-five'>
                 </ul>
-            </div>
+            </section>
         </aside>
     )
 }
