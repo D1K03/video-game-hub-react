@@ -14,7 +14,7 @@ export default function GameCards() {
                         <p><span className='order-filter-spacing'>Order by:<span className='bold-filter'>Relevance</span></span> <BsChevronDown className='dropdown-chevron'/></p>
                     </div>
                     <div>
-                        <p>Platforms <BsChevronDown className='dropdown-chevron'/></p>
+                        <p><span className='platform-spacing'>Platforms</span> <BsChevronDown className='dropdown-chevron'/></p>
                     </div>
                 </div>
                 <div className='page-formats'>
