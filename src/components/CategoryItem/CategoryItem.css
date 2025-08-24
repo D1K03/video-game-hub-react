@@ -12,4 +12,10 @@ li {
     background-color: var(--charcoal-grey);
     padding: 0.5rem;
     border-radius: 5px;
+    transition: background-color 50ms ease-in-out 50ms, color 50ms ease-in-out 0ms;
+}
+
+li:hover .icon-background {
+    background-color: white;
+    color: black;
 }
