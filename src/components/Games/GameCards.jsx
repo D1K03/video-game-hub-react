@@ -20,8 +20,8 @@ export default function GameCards() {
                 <div className='page-formats'>
                     <span></span>
                     <div>
-                        <div></div>
-                        <div></div>
+                        <div className='display-row'></div>
+                        <div className=''></div>
                     </div>
                 </div>
             </section>
