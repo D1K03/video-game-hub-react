@@ -21,7 +21,7 @@ export default function GameCards() {
                     <span></span>
                     <div>
                         <div className='display-row'></div>
-                        <div className=''></div>
+                        <div className='display-column'></div>
                     </div>
                 </div>
             </section>
