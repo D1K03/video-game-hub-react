@@ -7,11 +7,11 @@ export default function Navbar() {
         <header>
             <h1>Game Hub</h1>
             <form role='search'>
-                <label for="game-search" class="search-label">
+                <label htmlFor="game-search" className='search-label'>
                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
                     <input id="game-search" type="textbox" placeholder="Search"></input>
                     <FontAwesomeIcon icon={faXmark}/>
-                    <div class="shortcut-one">
+                    <div className='shortcut-one'>
                         <p><span className='symbol'>alt</span> + <span className='symbol'>enter</span></p>
                     </div>
                 </label>
