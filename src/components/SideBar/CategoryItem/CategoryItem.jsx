@@ -1,6 +1,8 @@
 import './CategoryItem.css'
 
-const CategoryItem = ({ icon: Icon, description }) => {
+const CategoryItem = ({ icon, description }) => {
+    const Icon = icon;
+    
     return (
         <li>
             <span className='icon-background'>

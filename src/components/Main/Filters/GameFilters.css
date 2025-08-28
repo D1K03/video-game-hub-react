@@ -1,0 +1,113 @@
+.page-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.game-filters > div {
+    background-color: #252525;
+    font-size: 0.85rem;
+    padding: 0 1rem;
+    border-radius: 10px;
+}
+
+.game-filters > div:hover{
+    cursor: pointer;
+}
+
+.game-filters > div > p span {
+    transition: color 150ms ease-in 100ms;
+}
+
+.game-filters > div p:hover span {
+    color: var(--filter-grey);
+}
+
+.game-filters div > p {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+}
+
+.game-filters div:nth-of-type(1) p {
+    gap: 0.5rem;
+}
+
+.game-filters div:nth-of-type(2) p {
+    gap: 2rem;
+}
+
+.order-filter-spacing {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.bold-filter {
+    font-weight: bolder;
+}
+
+.dropdown-chevron {
+    font-size: 1rem;
+    color: var(--filter-grey);
+}
+
+.page-formats, .page-formats > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: small;
+    color: var(--filter-grey);
+}
+
+.format-row, .format-column {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #272727;
+    border-radius: 5px;
+}
+
+.format-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2px;
+    padding: 0.5rem;
+}
+
+.format-row > div {
+    width: 0.6rem;
+    aspect-ratio: 5/8;
+    border: 0.1rem solid white;
+    border-radius: 3px;
+}
+
+.format-column, .format-column-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.format-column {
+    overflow: hidden;
+    position: relative;
+}
+
+.format-column-sub {
+    position: absolute;
+    top: -24px;
+    gap: 0.25rem;
+}
+
+.format-column-sub div {
+    width: 1.80rem;
+    aspect-ratio: 1/1;
+    border: 0.1rem solid white;
+    border-radius: 5px;
+}

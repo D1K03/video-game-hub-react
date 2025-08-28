@@ -1,0 +1,10 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-area: m;
+}
+
+main h2 {
+    font-size: 4rem;
+}

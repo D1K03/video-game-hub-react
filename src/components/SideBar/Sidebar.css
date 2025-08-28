@@ -3,6 +3,7 @@ aside {
     flex-direction: column;
     grid-area: a;
     gap: 1.5rem;
+    margin-right: 2.5rem;
 }
 
 aside h2 {

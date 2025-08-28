@@ -15,6 +15,7 @@
     --body-black: #151515;
     --light-grey: #767676;
     --charcoal-grey: #2D2D2D;
+    --filter-grey: #777777;
 }
 
 html {
@@ -32,4 +33,5 @@ html {
 body {
   padding: 1.75rem 3rem;
   margin: 0 auto;
+  max-width: 1920px;
 }

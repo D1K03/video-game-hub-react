@@ -1,4 +1,4 @@
-import CategoryItem from '../CategoryItem/CategoryItem'
+import CategoryItem from './CategoryItem/CategoryItem'
 import './Sidebar.css'
 import { BsStarFill, BsFire, BsSkipForwardFill, BsCalendarDate, BsTrophyFill, BsBarChartFill, BsBalloonFill, BsController, BsDownload, BsFolderFill, BsChatFill, BsGenderAmbiguous, BsPersonFill, BsHash, BsCodeSlash, BsCollectionFill, BsChevronDown, BsWindows, BsPlaystation, BsXbox, BsNintendoSwitch, BsPhone, BsAndroid2 } from 'react-icons/bs'
 

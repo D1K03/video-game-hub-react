@@ -1,14 +1,14 @@
 import './App.css'
-import GameCards from './components/Games/GameCards'
 import Navbar from './components/Header/Navbar'
 import Sidebar from './components/SideBar/Sidebar'
+import Central from './components/Main/Central'
 
 function App() {
   return (
     <div className='page-layout'>
       <Navbar/>
       <Sidebar/>
-      <GameCards/>
+      <Central/>
     </div>
   )
 }
