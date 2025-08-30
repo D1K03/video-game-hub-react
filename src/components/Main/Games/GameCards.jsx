@@ -52,15 +52,33 @@ function GameCards() {
                 games.length &&
                 games.map((game, index) => {
                     return (
-                        <div key={index}>
-                            <img src={null} alt={`${game.name} Image`}/>
-                            <div>
+                        <div className='game-card' key={index}>
+                            <img src={game.background_image} className='game-image' alt={`${game.name} Image`}/>
+                            <div className='game-data'>
                                 <p>
                                     {game.platforms.map((console, index) => {
                                         return (<span key={index}>{console.platform.name}</span>)
                                     })}
                                 </p>
-                                <p>{game.name}</p>
+                                <h3>{game.name}</h3>
+                                <div class="like-button">
+                                    <i class="bi bi-plus"></i>
+                                    <span class="like-count"></span>
+                                </div>
+                            </div>
+                            <div class="hover-data">
+                                <div class="extra-detail">
+                                    <span class="detail-title">Release date:</span>
+                                    <span class="release-date"></span>
+                                </div>
+                                <div class="extra-detail">
+                                    <span class="detail-title">Genres:</span>
+                                    <span class="game-genres"></span>
+                                </div>
+                                <div class="extra-detail">
+                                    <span class="detail-title">User Score:</span>
+                                    <span class="critic-ranking"></span>
+                                </div>
                             </div>
                         </div>
                     )
