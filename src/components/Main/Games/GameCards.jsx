@@ -2,21 +2,28 @@ import './GameCards.css';
 import tuxIcon from '../../../assets/images/tux.svg'
 import { useEffect, useState } from 'react';
 import { useSearchParams } from "react-router";
-import { BsWindows, BsPlaystation, BsXbox, BsNintendoSwitch, BsPhone, BsAndroid2, BsApple } from 'react-icons/bs';
+import { BsWindows, BsPlaystation, BsXbox, BsNintendoSwitch, BsPhone, BsAndroid2, BsApple, BsPlus, BsGlobe2 } from 'react-icons/bs';
 
 const RAWG_API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = new URL("https://api.rawg.io/api/games");
 
 const platformMap = {
-    "PC": BsWindows,
-    "Xbox": BsXbox,
-    "PlayStation": BsPlaystation,
-    "PS": BsPlaystation,
-    "Android": BsAndroid2,
-    "macOS": BsApple,
-    "iOS": BsPhone,
-    "Linux": tuxIcon,
-    "Nintendo": BsNintendoSwitch
+    1: BsXbox,
+    3: BsPhone,
+    4: BsWindows,
+    5: BsApple,
+    7: BsNintendoSwitch,
+    16: BsPlaystation,
+    21: BsAndroid2,
+    171: BsGlobe2
+}
+
+const consoleLookup = {
+    14: 1,
+    186: 1,
+    18: 16,
+    19: 16,
+    187: 16
 }
 
 function GameCards() {
@@ -24,14 +31,19 @@ function GameCards() {
     const [isLoading, setIsLoading] = useState(false);
     const [games, setGames] = useState([]);
 
-    const checkConsole = (platform) => {
-        const keys = Object.keys(platformMap);
+    const checkConsole = (platformId) => {
+        if (platformId === 6) {
+            return (
+            <img src={tuxIcon} alt='Linux'/>
+        )}
+        const lookupId = consoleLookup[platformId]
+        const iconId = lookupId || platformId
 
-        for (const key of keys) {
-            if (platform.includes(key)) {
-                return platformMap[key];
-            }
-        }
+        const PlatformIcon = platformMap[iconId]
+
+        let result = PlatformIcon ? <PlatformIcon/> : null
+
+        return result
     }
 
     useEffect(() => {
@@ -79,27 +91,27 @@ function GameCards() {
                             <img src={game.background_image} className='game-image' alt={`${game.name} Image`}/>
                             <div className='game-data'>
                                 <p>
-                                    {game.platforms.map((console, index) => {
-                                        return (<span key={index}>{checkConsole(console.platform.name)}</span>)
+                                    {game.platforms.map((console) => {
+                                        return (<span key={console.platform.id}>{checkConsole(console.platform.id)}</span>)
                                     })}
                                 </p>
                                 <h3>{game.name}</h3>
-                                <div class="like-button">
-                                    <i class="bi bi-plus"></i>
-                                    <span class="like-count"></span>
+                                <div className='like-button'>
+                                    <span>+</span>
+                                    <span className='like-count'>100</span>
                                 </div>
-                                <div class="hover-data">
-                                    <div class="extra-detail">
-                                        <span class="detail-title">Release date:</span>
-                                        <span class="release-date"></span>
+                                <div className='hover-data'>
+                                    <div className='extra-detail'>
+                                        <span className='detail-title'>Release date:</span>
+                                        <span className='release-date'></span>
                                     </div>
-                                    <div class="extra-detail">
-                                        <span class="detail-title">Genres:</span>
-                                        <span class="game-genres"></span>
+                                    <div className='extra-detail'>
+                                        <span className='detail-title'>Genres:</span>
+                                        <span className='game-genres'></span>
                                     </div>
-                                    <div class="extra-detail">
-                                        <span class="detail-title">User Score:</span>
-                                        <span class="critic-ranking"></span>
+                                    <div className='extra-detail'>
+                                        <span className='detail-title'>User Score:</span>
+                                        <span className='critic-ranking'></span>
                                     </div>
                                 </div>
                             </div>
